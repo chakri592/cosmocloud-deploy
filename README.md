@@ -58,3 +58,4 @@ Redis
 
 - Image: redis
 - Port: 6379
+git clone: https://github.com/chakri592/cosmocloud-deploy.git
