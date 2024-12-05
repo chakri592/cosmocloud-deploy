@@ -32,7 +32,7 @@ Redis
 ### Deployment Structure
 #### 1. Backend
 - Deployment File: backend-deployment.yml( name: backend-deployment, app: backend)
-- Service File: backend-service.yml
+- Service File: backend-service.yml( name: backend-svc)
 - ConfigMap: Holds REDIS_URI for backend communication with Redis.
 ##### Key Details:
 
@@ -42,7 +42,7 @@ Redis
 - REDIS_URI: redis://redis-svc:6379
 #### 2. Frontend
 - Deployment File: frontend-deployment.yml( name: frontend-deployment, app: frontend)
-- Service File: frontend-service.yml
+- Service File: frontend-service.yml( name: frontend-svc)
 - ConfigMap: Holds BACKEND_URL for frontend communication with the backend.
 ##### Key Details:
 
@@ -53,7 +53,7 @@ Redis
 - BACKEND_URL: http://backend-svc:8000
 #### 3. Redis
 - Deployment File: redis-deployment.yml( name: redis-deployment, app: redis-app)
-- Service File: redis-service.yml
+- Service File: redis-service.yml( name: redis-svc)
 ##### Key Details:
 
 - Image: redis
