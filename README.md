@@ -31,7 +31,7 @@ Frontend
 Redis
 ### Deployment Structure
 #### 1. Backend
-- Deployment File: backend-deployment.yml
+- Deployment File: backend-deployment.yml( name: backend-deployment, app: backend)
 - Service File: backend-service.yml
 - ConfigMap: Holds REDIS_URI for backend communication with Redis.
 ##### Key Details:
@@ -41,7 +41,7 @@ Redis
 - Environment Variable:
 - REDIS_URI: redis://redis-svc:6379
 #### 2. Frontend
-- Deployment File: frontend-deployment.yml
+- Deployment File: frontend-deployment.yml( name: frontend-deployment, app: frontend)
 - Service File: frontend-service.yml
 - ConfigMap: Holds BACKEND_URL for frontend communication with the backend.
 ##### Key Details:
@@ -52,10 +52,11 @@ Redis
 - Environment Variable:
 - BACKEND_URL: http://backend-svc:8000
 #### 3. Redis
-- Deployment File: redis-deployment.yml
+- Deployment File: redis-deployment.yml( name: redis-deployment, app: redis-app)
 - Service File: redis-service.yml
 ##### Key Details:
 
 - Image: redis
 - Port: 6379
-git clone: https://github.com/chakri592/cosmocloud-deploy.git
+- ---------------------------------------
+- git clone: https://github.com/chakri592/cosmocloud-deploy.git
