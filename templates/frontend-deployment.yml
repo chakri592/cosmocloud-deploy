@@ -19,7 +19,7 @@ spec:
         - name: frontend-container
           image: shreybatra/sample-frontend
           ports:
-            - containerPort: 5175
+            - containerPort: 5173
           env:
             - name: BACKEND_URL
               valueFrom:
