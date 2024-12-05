@@ -44,7 +44,7 @@ Redis
 - Deployment File: frontend-deployment.yml
 - Service File: frontend-service.yml
 - ConfigMap: Holds BACKEND_URL for frontend communication with the backend.
-#####Key Details:
+##### Key Details:
 
 - Image: shreybatra/sample-frontend
 - Port: 5175
