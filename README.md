@@ -47,7 +47,7 @@ Redis
 ##### Key Details:
 
 - Image: shreybatra/sample-frontend
-- Port: 5175
+- Port: 5173
 - NodePort: 31000
 - Environment Variable:
 - BACKEND_URL: http://backend-svc:8000
