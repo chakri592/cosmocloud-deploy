@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: frontend-container
-          image: shreybatra/sample-frontend
+          image: {{ .Values.frontend.image }}
           ports:
             - containerPort: {{ .Values.frontend.servicePort }}
           env:
