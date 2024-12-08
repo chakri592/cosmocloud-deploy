@@ -2,24 +2,24 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend-deployment
-  namespace: default
+  namespace: {{ .Values.namespace }}
   labels:
-    app: frontend
+    app: frontend-app
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: frontend
+      app: frontend-app
   template:
     metadata:
       labels:
-        app: frontend
+        app: frontend-app
     spec:
       containers:
         - name: frontend-container
           image: shreybatra/sample-frontend
           ports:
-            - containerPort: 5173
+            - containerPort: {{ .Values.frontend.servicePort }}
           env:
             - name: BACKEND_URL
               valueFrom:
