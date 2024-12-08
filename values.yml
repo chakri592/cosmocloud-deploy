@@ -1,0 +1,15 @@
+backend:
+  image: shreybatra/sample-backend
+  servicePort: 8000
+
+frontend:
+  image: shreybatra/sample-frontend
+  servicePort: 5173
+  nodePort: 31000
+
+redis:
+  image: redis
+  servicePort: 6379
+
+replicaCount: 1
+namespace: default
