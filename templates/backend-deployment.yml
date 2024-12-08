@@ -2,11 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend-deployment
-  namespace: default
+  namespace: {{ .Values.namespace }}
   labels:
     app: backend
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: backend
@@ -17,9 +17,9 @@ spec:
     spec:
       containers:
         - name: backend-container
-          image: shreybatra/sample-backend
+          image: {{ .Values.backend.image }}
           ports:
-            - containerPort: 8000
+            - containerPort: {{ .Values.backend.servicePort }}
           env:
             - name: REDIS_URI
               valueFrom:
