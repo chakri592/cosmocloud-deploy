@@ -9,4 +9,4 @@ spec:
     - port: {{ .Values.backend.servicePort }}
       targetPort: {{ .Values.backend.servicePort }}
   selector:
-    app: backend
+    app: backend-app
