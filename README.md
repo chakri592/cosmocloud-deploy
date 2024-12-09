@@ -1,21 +1,4 @@
-## Project Structure
-```
 
-.
-|  
-├── cosmocloud-deploy
-│   ├── Charts.yml      
-├── templates/
-│    └── backend-deployment.yml
-|    └── backend-service.yml
-|    └── frontend-deployment.yml
-│    └── frontend-service.yml
-|    └── redis-deployment.yml
-|    └── redis-service.yml
-├── README.md
-└── .
-
-```
 
 # cosmocloud-deploy
 Cosmocloud-Deploy is a Helm chart designed to deploy a backend, frontend, and Redis for a cloud-native application. This project simplifies the deployment of these components using Kubernetes.
@@ -31,7 +14,7 @@ Frontend
 Redis
 ### Deployment Structure
 #### 1. Backend
-- Deployment File: backend-deployment.yml( name: backend-deployment, app: backend)
+- Deployment File: backend-deployment.yml( name: backend-deployment, app: backend-app)
 - Service File: backend-service.yml( name: backend-svc)
 - ConfigMap: Holds REDIS_URI for backend communication with Redis.
 ##### Key Details:
@@ -41,7 +24,7 @@ Redis
 - Environment Variable:
 - REDIS_URI: redis://redis-svc:6379
 #### 2. Frontend
-- Deployment File: frontend-deployment.yml( name: frontend-deployment, app: frontend)
+- Deployment File: frontend-deployment.yml( name: frontend-deployment, app: frontend-app)
 - Service File: frontend-service.yml( name: frontend-svc)
 - ConfigMap: Holds BACKEND_URL for frontend communication with the backend.
 ##### Key Details:
